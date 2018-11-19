@@ -4,7 +4,7 @@
 
 ## Install
 
-`npm i hold-up --save`
+`npm i @cloudcmd/hold-up --save`
 
 ## API
 
@@ -40,7 +40,7 @@ await tryToCatch(holdUp, fn, 'hello', {
 In old `node.js` environments that not fully supports `es2015`, `hold-up` can be used with:
 
 ```js
-var hold-up = require('hold-up/legacy');
+var holdUp = require('hold-up/legacy');
 ```
 
 ## Related
