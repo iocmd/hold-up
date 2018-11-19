@@ -14,7 +14,9 @@
     "interval",
     "promise",
     "async",
-    "await"
+    "await",
+    "try-catch",
+    "try"
   ],
   "scripts": {
     "test": "tape test/*.js",
