@@ -55,14 +55,14 @@ var holdUp = require('hold-up/legacy');
 
 MIT
 
-[NPMIMGURL]:                https://img.shields.io/npm/v/hold-up.svg?style=flat
-[BuildStatusIMGURL]:        https://img.shields.io/travis/coderaiser/hold-up/master.svg?style=flat
-[DependencyStatusIMGURL]:   https://img.shields.io/david/coderaiser/hold-up.svg?style=flat
+[NPMIMGURL]:                https://img.shields.io/npm/v/@iocmd/hold-up.svg?style=flat
+[BuildStatusIMGURL]:        https://img.shields.io/travis/iocmd/hold-up/master.svg?style=flat
+[DependencyStatusIMGURL]:   https://img.shields.io/david/iocmd/hold-up.svg?style=flat
 [LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
-[NPMURL]:                   https://npmjs.org/package/hold-up "npm"
-[BuildStatusURL]:           https://travis-ci.org/coderaiser/hold-up  "Build Status"
-[DependencyStatusURL]:      https://david-dm.org/coderaiser/hold-up "Dependency Status"
+[NPMURL]:                   https://npmjs.org/package/@iocmd/hold-up "npm"
+[BuildStatusURL]:           https://travis-ci.org/iocmd/hold-up  "Build Status"
+[DependencyStatusURL]:      https://david-dm.org/iocmd/hold-up "Dependency Status"
 [LicenseURL]:               https://tldrlegal.com/license/mit-license "MIT License"
 
-[CoverageURL]:              https://coveralls.io/github/coderaiser/hold-up?branch=master
-[CoverageIMGURL]:           https://coveralls.io/repos/coderaiser/hold-up/badge.svg?branch=master&service=github
+[CoverageURL]:              https://coveralls.io/github/iocmd/hold-up?branch=master
+[CoverageIMGURL]:           https://coveralls.io/repos/iocmd/hold-up/badge.svg?branch=master&service=github
