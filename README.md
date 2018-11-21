@@ -20,20 +20,24 @@
 ```js
 const holdUp = require('hold-up');
 const tryToCatch = require('try-to-catch');
-const fn = async (a) => {
+const fn = async (a = 'hello') => {
     throw Error(a);
 };
 
-await holdUp(fn, [
-    'hello'
-]);
+await holdUp(fn);
 
-// returns in a 5 seconds
+// reject in a 5 seconds
+[Error: hello]
+
+// with arguments
+await holdUp([fn, 'world']);
+
+// reject in a 5 seconds
 [Error: hello]
 
 
 // when you need to override options,
-await tryToCatch(holdUp, [fn, 'hello'], {
+await holdUp([fn, 'hello'], {
     count: 5,       // default
     time: 1000,     // default
     log: () => {},  //default
