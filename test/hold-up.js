@@ -43,6 +43,21 @@ test('hold-up: throw', async (t) => {
     t.end();
 });
 
+test('hold-up: fn: arguments', async (t) => {
+    const log = sinon.stub();
+    const fn = async (a, b) => {
+        throw Error(`${a}-${b}`);
+    };
+    
+    const [e] = await tryToCatch(holdUp, [fn, 'hello', 'world'], {
+        log,
+        count: 1,
+    });
+    
+    t.equal(e.message, 'hello-world', 'should equal');
+    t.end();
+});
+
 test('hold-up: call log', async (t) => {
     const log = sinon.stub();
     const fn = async () => {

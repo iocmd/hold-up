@@ -33,7 +33,7 @@ await holdUp(fn, [
 
 
 // when you need to override options,
-await tryToCatch(holdUp, fn, ['hello'], {
+await tryToCatch(holdUp, [fn, 'hello'], {
     count: 5,       // default
     time: 1000,     // default
     log: () => {},  //default
