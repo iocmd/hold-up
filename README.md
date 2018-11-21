@@ -53,7 +53,7 @@ await tryToCatch(holdUp, [fn, 'hello'], {
 MIT
 
 [NPMIMGURL]:                https://img.shields.io/npm/v/@iocmd/hold-up.svg?style=flat
-[BuildStatusIMGURL]:        https://img.shields.io/travis/iocmd/hold-up/master.svg?style=flat
+[BuildStatusIMGURL]:        https://travis-ci.com/iocmd/hold-up.svg?branch=master
 [DependencyStatusIMGURL]:   https://img.shields.io/david/iocmd/hold-up.svg?style=flat
 [LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
 [NPMURL]:                   https://npmjs.org/package/@iocmd/hold-up "npm"
