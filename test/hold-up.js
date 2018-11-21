@@ -8,7 +8,7 @@ const holdUp = require('..');
 
 test('hold-up: no args', async (t) => {
     const [e] = await tryToCatch(holdUp);
-    t.equal(e.message, 'fn should be a function!', 'should reject when no fn');
+    t.equal(e.message, 'fn should be a function or an array!', 'should reject when no fn');
     t.end();
 });
 
@@ -82,7 +82,7 @@ test('hold-up: not use options', async (t) => {
     const {setTimeout} = global;
     global.setTimeout = (fn) => setTimeout(fn, 1);
     
-    await tryToCatch(holdUp, fn, 'hello');
+    await tryToCatch(holdUp, [fn, 'hello']);
     
     global.setTimeout = setTimeout;
     

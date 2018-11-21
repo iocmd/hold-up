@@ -8,10 +8,10 @@
 
 ## API
 
-### holdUp(fn[, ...args][, options])
+### holdUp(fn[, args, options])
 
 - `fn` - function
-- `args` - arguments to a function
+- `args` - array of arguments
 - `options` - options may contain:
   - `log`
   - `count`
@@ -24,23 +24,20 @@ const fn = async (a) => {
     throw Error(a);
 };
 
-await tryToCatch(holdUp, fn, 'hello', {
-    count: 5,       // default
-    time: 1000,     // default
-    log: () => {},  //default
-});
+await holdUp(fn, [
+    'hello'
+]);
 
 // returns in a 5 seconds
 [Error: hello]
 
-```
 
-## Environments
-
-In old `node.js` environments that not fully supports `es2015`, `hold-up` can be used with:
-
-```js
-var holdUp = require('hold-up/legacy');
+// when you need to override options,
+await tryToCatch(holdUp, fn, ['hello'], {
+    count: 5,       // default
+    time: 1000,     // default
+    log: () => {},  //default
+});
 ```
 
 ## Related
