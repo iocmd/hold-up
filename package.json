@@ -1,7 +1,6 @@
 {
   "name": "@iocmd/hold-up",
   "version": "1.0.3",
-  "access": "public",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "setInterval with promises, counter and error handling",
   "homepage": "http://github.com/iocmd/hold-up",
@@ -49,5 +48,8 @@
   },
   "engines": {
     "node": ">=8"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
