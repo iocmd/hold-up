@@ -57,6 +57,17 @@ test('hold-up: fn: arguments', async (t) => {
     t.end();
 });
 
+test('hold-up: fn: return result', async (t) => {
+    const fn = async () => {
+        return 'hello';
+    };
+    
+    const result = await holdUp([fn]);
+    
+    t.equal(result, 'hello', 'should equal');
+    t.end();
+});
+
 test('hold-up: call log', async (t) => {
     const log = stub();
     const fn = async () => {
