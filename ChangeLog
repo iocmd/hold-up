@@ -1,3 +1,13 @@
+2019.08.16, v1.1.0
+
+feature:
+- (hold-up) add ability to return result
+- (hold-up) update dependencies
+- (package) nyc v14.1.1
+- (package) eslint v6.1.0
+- (package) eslint-plugin-node v9.1.0
+
+
 2018.11.21, v1.0.3
 
 fix:
