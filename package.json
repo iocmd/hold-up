@@ -19,32 +19,34 @@
     "try"
   ],
   "scripts": {
-    "test": "tape test/*.js",
-    "coverage": "nyc npm test",
-    "lint": "eslint lib test",
-    "report": "nyc report --reporter=text-lcov | coveralls",
-    "watcher": "nodemon -w test -w lib --exec",
-    "watch:test": "npm run watcher -- npm test",
-    "watch:lint": "npm run watcher -- 'npm run lint'",
-    "watch:tape": "nodemon -w test -w lib --exec tape",
-    "watch:coverage:base": "npm run watcher -- nyc npm test",
-    "watch:coverage:tape": "npm run watcher -- nyc tape",
-    "watch:coverage": "bin/redrun.js watch:coverage:base"
+    "test": "madrun test",
+    "coverage": "madrun coverage",
+    "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint",
+    "report": "madrun report",
+    "watcher": "madrun watcher",
+    "watch:test": "madrun watch:test",
+    "watch:lint": "madrun watch:lint",
+    "watch:tape": "madrun watch:tape",
+    "watch:coverage:base": "madrun watch:coverage:base",
+    "watch:coverage:tape": "madrun watch:coverage:tape",
+    "watch:coverage": "madrun watch:coverage"
   },
   "dependencies": {
     "try-to-catch": "^1.1.1"
   },
   "license": "MIT",
   "devDependencies": {
+    "@cloudcmd/stub": "^2.3.1",
     "coveralls": "^3.0.2",
     "eslint": "^6.1.0",
     "eslint-plugin-node": "^9.1.0",
+    "madrun": "^2.5.0",
     "nodemon": "^1.11.0",
     "nyc": "^14.1.1",
+    "putout": "^5.5.0",
     "redrun": "^7.0.0",
-    "sinon": "^7.1.1",
-    "sinon-called-with-diff": "^3.0.0",
-    "tape": "^4.5.1"
+    "supertape": "^1.2.3"
   },
   "engines": {
     "node": ">=8"

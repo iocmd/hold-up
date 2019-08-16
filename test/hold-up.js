@@ -1,8 +1,7 @@
 'use strict';
 
-const test = require('tape');
-const diff = require('sinon-called-with-diff');
-const sinon = diff(require('sinon'));
+const stub = require('@cloudcmd/stub');
+const test = require('supertape');
 const tryToCatch = require('try-to-catch');
 const holdUp = require('..');
 
@@ -29,7 +28,7 @@ test('hold-up: no args', async (t) => {
 });
 
 test('hold-up: throw', async (t) => {
-    const log = sinon.stub();
+    const log = stub();
     const fn = async () => {
         throw Error('hello');
     };
@@ -44,7 +43,7 @@ test('hold-up: throw', async (t) => {
 });
 
 test('hold-up: fn: arguments', async (t) => {
-    const log = sinon.stub();
+    const log = stub();
     const fn = async (a, b) => {
         throw Error(`${a}-${b}`);
     };
@@ -59,7 +58,7 @@ test('hold-up: fn: arguments', async (t) => {
 });
 
 test('hold-up: call log', async (t) => {
-    const log = sinon.stub();
+    const log = stub();
     const fn = async () => {
         throw Error('hello');
     };
@@ -75,7 +74,7 @@ test('hold-up: call log', async (t) => {
 });
 
 test('hold-up: not call log', async (t) => {
-    const log = sinon.stub();
+    const log = stub();
     const fn = async () => {};
     
     await tryToCatch(holdUp, fn, {
@@ -89,7 +88,7 @@ test('hold-up: not call log', async (t) => {
 });
 
 test('hold-up: not use options', async (t) => {
-    const log = sinon.stub();
+    const log = stub();
     const fn = async (a) => {
         throw a;
     };
