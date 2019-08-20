@@ -40,7 +40,7 @@ await holdUp([fn, 'world']);
 await holdUp([fn, 'hello'], {
     count: 5,       // default
     time: 1000,     // default
-    log: () => {},  //default
+    log: () => {},  // default
 });
 ```
 
