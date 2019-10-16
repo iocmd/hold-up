@@ -33,7 +33,7 @@
     "watch:coverage": "madrun watch:coverage"
   },
   "dependencies": {
-    "try-to-catch": "^1.1.1"
+    "try-to-catch": "^2.0.0"
   },
   "license": "MIT",
   "devDependencies": {
