@@ -1,6 +1,7 @@
 # Hold Up [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
 
 `hold up` is `setInterval` with `promises`, `counter` and `error handling`.
+It runs a `function` and if it `throws` run it again with interval (defaults to 1 second) `counter` times (defaults to 5). If it fails, promise throws, if successed resolves.
 
 ## Install
 
@@ -8,7 +9,8 @@
 
 ## API
 
-### holdUp(fn[, args, options])
+### holdUp(fn[, options])
+### holdUp([fn, args], options)
 
 - `fn` - function
 - `args` - array of arguments
@@ -19,7 +21,6 @@
 
 ```js
 const holdUp = require('hold-up');
-const tryToCatch = require('try-to-catch');
 const fn = async (a = 'hello') => {
     throw Error(a);
 };
